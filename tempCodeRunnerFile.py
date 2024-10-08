@@ -1,1 +1,1 @@
-final_score=max(initial_score)
+ print

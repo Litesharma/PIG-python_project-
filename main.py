@@ -8,6 +8,8 @@ def roll():
 
 def print_separator():
     print("\n" + "-"*30 + "\n")
+def print_separator_space():
+    print("\n")
 
 # Input number of players
 while True:
@@ -38,6 +40,7 @@ while not found:
         current_score = 0
         
         while True:
+            print_separator_space()
             roll_perm = input("Would you like to roll the dice (y/n): ").strip().lower()
             if roll_perm == 'y':
                 value = roll()
@@ -62,7 +65,7 @@ while not found:
                     print_separator()
                     print(f"Player {winning_idx + 1} wins with a total score of {final_score}!")
                     break
-                
+                print_separator_space()
                 print(f"Your current score for this turn is {current_score}.")
             else:
                 break
